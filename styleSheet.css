@@ -1,3 +1,5 @@
+/*Start global*/
+
 * {
     margin: 0;
     padding: 0;
@@ -24,6 +26,12 @@ section {
     padding: 15rem;
 }
 
+
+/*End global*/
+
+
+/*Start reusable*/
+
 .container {
     width: 90%;
     max-width: 120rem;
@@ -31,6 +39,19 @@ section {
     margin: 0 auto;
     position: relative;
 }
+
+.section-heading h1 {
+    font-size: 5rem;
+    margin-bottom: 2rem;
+    position: relative;
+    text-align: center;
+}
+
+
+/*End reusable*/
+
+
+/*Start header*/
 
 .top-nav {
     inline-size: 1rem;
@@ -47,19 +68,24 @@ section {
     background-color: #fff !important;
     transition: background-color 200ms linear;
     background-image: url(https://d33wubrfki0l68.cloudfront.net/2a843fab857e8fb26d278fcb886cac1965817bd1/47e81/_next/static/images/logo_white-074711be1d389a1fd25346a5aee10ea5.png);
+    height: 150px;
+    background-position: center;
 }
 
 .top-nav button {
-    width: 200px;
-    height: 150px;
-    width: 100%;
-    font-size: 3rem;
+    width: 100px;
+    height: 40px;
+    font-size: 1rem;
     background-color: #f5c117;
     border-radius: 15%;
 }
 
 .nav-link1 button {
     background-color: rgb(55, 90, 197);
+}
+
+.nav-link1 button:hover {
+    background-color: rgb(234, 238, 212);
 }
 
 .nav-list {
@@ -71,22 +97,26 @@ section {
 }
 
 li {
-    margin: 0 5rem;
+    margin: 1rem 1rem;
 }
 
 .nav-link {
     text-decoration: none;
     color: #eee;
-    font-weight: 100;
-    font-size: 5rem;
+    font-weight: 300;
+    font-size: 1.5rem;
     padding: 1rem;
+}
+
+.nav-list img {
+    width: 30%;
 }
 
 .nav-link:hover,
 .nav-link:focus {
     background: linear-gradient(to top, #f8f8f8, #370aa0);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: #370aa0;
     scroll-padding: 1rem;
     user-select: none;
 }
@@ -94,6 +124,12 @@ li {
 body header {
     background-color: rgb(2, 14, 51);
 }
+
+
+/*End header*/
+
+
+/*Start Landing-text*/
 
 .landing-text {
     display: flex;
@@ -112,28 +148,28 @@ body header {
 
 .landing-text h1 {
     text-align: left;
-    font-size: 10rem;
+    font-size: 3rem;
     font-family: "Roboto", sans-serif;
     color: #eee;
     scroll-padding: 1rem;
     user-select: none;
-    margin-top: 35rem;
-    margin-left: 5rem;
+    margin-top: 15rem;
+    margin-left: 2rem;
 }
 
 .landing-text h6 {
     text-align: left;
     font-weight: 300;
-    font-size: 4rem;
+    font-size: 2rem;
     color: #eee;
-    padding: 5rem;
+    padding: 2rem;
 }
 
 .landing-text .cta {
-    margin-left: 11%;
+    margin-left: 7%;
     text-indent: 10%;
     font-weight: 300;
-    font-size: 4rem;
+    font-size: 1rem;
     color: #eee;
     padding: 1rem;
     border: solid #f5c117;
@@ -150,6 +186,12 @@ body header {
     user-select: none;
 }
 
+
+/*End Landing-text*/
+
+
+/*Start services*/
+
 #Services {
     background-color: rgb(203, 209, 241);
 }
@@ -163,7 +205,7 @@ body header {
 }
 
 .section-heading h1 {
-    font-size: 5rem;
+    font-size: 3rem;
     margin-bottom: 2rem;
     position: relative;
     text-align: center;
@@ -185,8 +227,8 @@ body header {
 }
 
 .offers {
-    font-size: 2.5rem;
-    margin-top: 10rem;
+    font-size: 2rem;
+    margin-top: 2rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     grid-gap: 2.5rem;
@@ -199,25 +241,36 @@ body header {
     justify-content: center;
     align-items: center;
     padding: 2rem;
+    width: 80%;
+    height: 100%;
 }
 
 .description p {
     text-transform: uppercase;
     font-weight: 300;
+    font-size: 1.5rem;
 }
 
 .description h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: bold;
     margin: 1rem 0;
 }
+
+.icon-container img {
+    width: 80%;
+    flex-wrap: wrap;
+}
+
+
+/*End services*/
 
 
 /*Start timeline*/
 
 .nextGenHiring {
     background-blend-mode: color;
-    background-color: rgb(240, 251, 255);
+    background-color: ghostwhite;
 }
 
 .timeline {
@@ -227,14 +280,16 @@ body header {
     align-items: center;
 }
 
-.timeline .pic {
-    padding: 35rem;
-    text-align: left;
+.nextGenHiring .pic {
+    margin-top: 20rem;
+    padding-right: 9rem;
+    text-align: center;
     background-blend-mode: color;
+    display: flex;
+    width: 100%;
 }
 
 .timeline ul {
-    padding: 5rem;
     border-left: 4px solid #341ff7;
     border-radius: .8rem;
     background-color: rgba(0, 0, 0, 0, 05);
@@ -243,11 +298,22 @@ body header {
     padding: 5rem;
     list-style: none;
     text-align: left;
-    width: 70%;
 }
 
 .timeline h1 {
-    font-size: 6rem;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-bottom: 1rem;
+    color: rgb(2, 2, 56);
+}
+
+.nextGenHiring .list {
+    display: flex;
+}
+
+.timeline p {
+    font-size: 1rem;
     text-transform: uppercase;
     font-weight: 300;
     margin-bottom: 1rem;
@@ -259,6 +325,7 @@ body header {
     font-size: 3rem;
     padding-bottom: 1rem;
     position: relative;
+    padding: 2rem;
 }
 
 .timeline .date:last-of-type {
@@ -277,10 +344,9 @@ body header {
 
 .timeline .date::before {
     content: attr(data-date);
-    left: -28rem;
+    left: -15rem;
     text-align: right;
-    min-width: 10rem;
-    font-size: 10rem;
+    font-size: 5rem;
     opacity: .3;
 }
 
@@ -288,23 +354,25 @@ body header {
     content: " ";
     box-shadow: 0 0 0 10px #313534;
     border-radius: 100%;
-    left: -11rem;
+    left: -7rem;
     height: 1.5rem;
     width: 1.5rem;
-    background-color: #e7e3e3;
-    background-blend-mode: hue;
+    background-color: #c4c4c4;
+    background-blend-mode: lighten;
+}
+
+.timeline .date:hover {
+    background: linear-gradient(to top, #f8f8f8, #807f81);
+    -webkit-text-fill-color: #6642a8;
+    scroll-padding: 1rem;
+    border-radius: 10%;
 }
 
 
 /*End timeline*/
 
-.timeline .ul:hover {
-    background: linear-gradient(to top, #f8f8f8, #370aa0);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: #e6f7f6;
-    scroll-padding: 1rem;
-    user-select: none;
-}
+
+/*Start contact*/
 
 .getintouch {
     text-align: center;
@@ -313,13 +381,13 @@ body header {
 }
 
 .getintouch h1 {
-    font-size: 8rem;
+    font-size: 4rem;
     padding: 2rem;
     color: rgb(22, 50, 91);
 }
 
 .getintouch h3 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 400;
     padding: 2rem;
 }
@@ -331,21 +399,22 @@ body header {
 }
 
 .getintouch button:hover {
-    background: linear-gradient(to top, #f8f8f8, #370aa0);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: #f5c117;
+    background-color: #fff;
+    -webkit-text-fill-color: #050e8d;
     scroll-padding: 1rem;
     user-select: none;
 }
+
+
+/*End contact*/
+
+
+/*Start footer*/
 
 .footerstyle {
     background-color: rgb(22, 50, 91);
     background-image: url(https://d33wubrfki0l68.cloudfront.net/d878614d97021fdeea6d1059797901a56ac871d8/bfc03/_next/static/images/footer-bg-552708bc98446e2327640a16897ccc19.png);
     padding: 60px 60px 130px;
-    padding-top: 60px;
-    padding-right: 60px;
-    padding-bottom: 130px;
-    padding-left: 60px;
     background-repeat: no-repeat;
     background-position: center 50px;
     overflow: hidden;
@@ -353,7 +422,7 @@ body header {
 
 .footerstyle .footer-menu {
     color: #ffffff;
-    font-size: 3rem;
+    font-size: 1.5rem;
     list-style: none;
     text-decoration: none;
     display: flex;
@@ -383,6 +452,19 @@ body header {
 }
 
 .footerstyle .footerstyle1 {
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
     text-align: center;
 }
+
+.footerstyle img {
+    width: 20%;
+}
+
+
+/*End footer*/
+
+
+/*Start media queries*/
+
+
+/*End media queries*/
