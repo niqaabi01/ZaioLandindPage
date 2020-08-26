@@ -1,14 +1,15 @@
 $(document).ready(function() {
     $(document).scroll(function() {
-        var $nav = $(".top-nav");
+        var $nav = $(".navbar");
         $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
     });
 });
 
-// $(document).ready(function() {
-//     $('.menu-toggler').on("click", function() {
-//         $(this).toggleClass("open");
-//         $(".top-nav").toggleClass("open");
 
-//     })
-// });* only execute this script when the document is ready */
+
+let mainNav = document.getElementById('js-menu');
+let navBarToggle = document.getElementById('js-navbar-toggle');
+
+navBarToggle.addEventListener('click', function() {
+    mainNav.classList.toggle('active');
+});
