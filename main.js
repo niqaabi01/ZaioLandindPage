@@ -11,4 +11,4 @@ $(document).ready(function() {
 //         $(".top-nav").toggleClass("open");
 
 //     })
-// });
+// });* only execute this script when the document is ready */
